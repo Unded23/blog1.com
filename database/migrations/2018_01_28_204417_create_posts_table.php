@@ -23,8 +23,8 @@ class CreatePostsTable extends Migration
             $table->text('body');
             $table->text('meta_description');
             $table->text('meta_keywords');
-            $table->boolean('active')->default(false);
-            $table->integer('person_id')->unsigned();
+            $table->dateTime('time_first');
+            $table->dateTime('time_last');
         });
     }
 
