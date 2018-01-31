@@ -17,12 +17,8 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('title');
-            $table->string('slug')->unique();
-            $table->string('seo_title')->nullable();
             $table->text('excerpt');
             $table->text('body');
-            $table->text('meta_description');
-            $table->text('meta_keywords');
             $table->dateTime('time_first');
             $table->dateTime('time_last');
         });

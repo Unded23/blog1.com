@@ -14,7 +14,7 @@ class CreateForeignKeys extends Migration
      */
     public function up()
     {
-        Schema::table('persons', function(Blueprint $table) {
+        Schema::table('people', function(Blueprint $table) {
             $table->foreign('post_id')->references('id')->on('posts')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');

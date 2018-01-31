@@ -19,4 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::name('person.index')->get('/person/all', 'Front.PersonController@index');
 
+Route::namespace('Front')->group(function () {
+    Route::name('person.index')->get('/person/all', 'PersonController@index');
+    Route::name('person.page')->get('/person/{person}', 'PersonController@show');
+});
